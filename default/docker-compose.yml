@@ -247,7 +247,7 @@ services:
       service: network-deploy-service
 
   configserver:
-    image: "samiyounis01/configserver:s12"
+    image: "samiyounis01/configserver:s13"
     container_name: configserver_ms
     ports:
       - "8071:8080"
@@ -265,7 +265,7 @@ services:
       service: microservice-base-config
 
   eurekaserver:
-    image: "samiyounis01/eurekaserver:s12"
+    image: "samiyounis01/eurekaserver:s13"
     container_name: eurekaserver_ms
     ports:
       - "8070:8070"
@@ -287,7 +287,7 @@ services:
 
 
   accounts:
-    image: "samiyounis01/account:s12"
+    image: "samiyounis01/account:s13"
     container_name: accounts_ms
     healthcheck:
       test: "curl --fail --silent localhost:8080/actuator/health | grep UP || exit 1"
@@ -312,7 +312,7 @@ services:
 
 
   loans:
-    image: "samiyounis01/loans:s12"
+    image: "samiyounis01/loans:s13"
     container_name: loans_ms
     healthcheck:
       test: "curl --fail --silent localhost:8090/actuator/health | grep UP || exit 1"
@@ -334,7 +334,7 @@ services:
 
 
   cards:
-    image: "samiyounis01/cards:s12"
+    image: "samiyounis01/cards:s13"
     container_name: cards_ms
     healthcheck:
       test: "curl --fail --silent localhost:9000/actuator/health | grep UP || exit 1"
@@ -356,7 +356,7 @@ services:
       service: microservice-eurekaserver-config
 
   gatewayserver:
-    image: "samiyounis01/gatewayserver:s12"
+    image: "samiyounis01/gatewayserver:s13"
     container_name: gatewayserver_ms
     ports:
       - "8072:8072"
